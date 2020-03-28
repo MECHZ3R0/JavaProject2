@@ -4,12 +4,23 @@ public class Attendance2Test {
     public static void main(String[] args) {
         String[] people = {"Alpha", "Beta", "Gamma", "Delta", "Omega"};
         int[] id = {1,2,3,4,5};
-        Attendance2 x = new Attendance2(people,id);
-        x.enterAttendanceToday("mon");
-        x.enterAttendanceToday("tue");
-        x.printWeeklyAttendance();
+        String[] subject = {"Engl", "Math", "Phys", "Chem","Biol"};
+        Attendance2 attend = new Attendance2(people,id);
+        LabAttendance labAttend = new LabAttendance(people,id,subject);
+        attend.enterAttendanceToday("mon");
+        attend.enterAttendanceToday("tue");
+        attend.printWeeklyAttendance();
         System.out.println("\n");
-        x.findTheMostAttendance();
-        x.findTheMostAttendedDay();
+        attend.findTheMostAttendance();
+        attend.findTheMostAttendedDay();
+        attend.printDailyAttendance("Fri");
+        System.out.println("-----------------------------");
+        System.out.println("-----------------------------");
+        labAttend.enterGrade(87,"Alpha");
+        labAttend.enterAttendanceToday("mon");
+        labAttend.enterAttendanceToday("tue");
+        labAttend.printGrades();
+        System.out.println("=====================================================================");
+        labAttend.printAttendanceGrades();
     }
 }

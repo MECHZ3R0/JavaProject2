@@ -3,9 +3,9 @@ package inheritance;
 import java.util.Arrays;
 
 public class Attendance2 {
-    private String[] nameList;
-    private int[] idList;
-    private int[][] weeklyCheckList;
+    protected String[] nameList;
+    protected int[] idList;
+    protected int[][] weeklyCheckList;
     final String[] daysOfWeek={"Mon","Tue","Wed","Thu","Fri"};
 
     public Attendance2(String[] nameList, int[] idList) {
@@ -85,6 +85,32 @@ public class Attendance2 {
         }
         int[] results=findMax(totalDays);
         System.out.println("The Most Attended Day is "+daysOfWeek[results[1]]+" with "+results[0]+" people.");
+    }
+
+    public void printDailyAttendance(String day){
+        int index=10;
+        for (int i=0; i<daysOfWeek.length;i++){
+            if (daysOfWeek[i].equalsIgnoreCase(day)){
+                index=i;
+            }
+        }
+        System.out.println(daysOfWeek[index]);
+        System.out.print("\t\t");
+        for (String names: this.nameList) {
+            System.out.print(names + "\t\t");
+        }
+        System.out.println();
+        System.out.println("__________________________________________________________________");
+            System.out.print(this.daysOfWeek[index]+"\t|\t");
+            for (int j=0;j<this.nameList.length;j++){
+                if (this.weeklyCheckList[index][j]==0){
+                    System.out.print("Absent\t\t");
+                }
+                else {
+                    System.out.print("Present\t\t");
+                }
+            }
+            System.out.println();
     }
 
     @Override

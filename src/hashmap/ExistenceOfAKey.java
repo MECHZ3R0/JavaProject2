@@ -1,6 +1,5 @@
-package hashmapping;
+package hashmap;
 
-import java.util.Arrays;
 import java.util.HashMap;
 
 public class ExistenceOfAKey {

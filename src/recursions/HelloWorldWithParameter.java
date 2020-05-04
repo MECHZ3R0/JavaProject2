@@ -1,6 +1,6 @@
 package recursions;
 
-public class HelloWorld {
+public class HelloWorldWithParameter {
     public static void main(String[] args) {
         int count=0;
         write(count);

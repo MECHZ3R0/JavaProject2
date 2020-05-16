@@ -1,4 +1,4 @@
-package comparatorinterface;
+package comparator_interface;
 
 public class Student {
     int id;

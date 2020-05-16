@@ -1,11 +1,11 @@
-package collectionsstaticmethods;
+package collections_static_methods;
 
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
-public class Frequency {
+public class Fill {
     public static void main(String[] args) {
         List<Integer> numbers=new LinkedList<>();
         Random rand=new Random();
@@ -13,6 +13,7 @@ public class Frequency {
             numbers.add(rand.nextInt(50));
         }
         System.out.println(numbers);
-        System.out.println(Collections.frequency(numbers,1));
+        Collections.fill(numbers,5);
+        System.out.println(numbers);
     }
 }

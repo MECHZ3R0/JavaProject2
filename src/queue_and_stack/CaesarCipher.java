@@ -1,4 +1,4 @@
-package queueandstack;
+package queue_and_stack;
 
 import java.util.Arrays;
 import java.util.LinkedList;

@@ -1,4 +1,4 @@
-package collectionsstaticmethods;
+package collections_static_methods;
 
 import java.util.*;
 

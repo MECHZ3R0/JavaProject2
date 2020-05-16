@@ -1,0 +1,4 @@
+Apple:  	$2.99
+Chips:  	$2.49
+Avocado:	$6.99
+Orange:  	$3.99
